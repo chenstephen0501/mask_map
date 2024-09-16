@@ -1,6 +1,8 @@
 # Vue 3 Mask Map
 
-這是一個使用 Vue 3、Vite、Tailwind CSS 以及多個插件的 Todo List 前端專案。它連接到 Django REST Framework 提供的後端 API。
+這是一個使用 Vue 3、Vite、Tailwind CSS 以及多個插件製作的口罩地圖前端專案。該專案透過第三方 API 顯示各藥局的成人與兒童口罩庫存，並提供地圖顯示功能。
+
+[口罩地圖連結](https://maskmap0.netlify.app/)
 
 ![Mask Map首頁](/public/image/maks_map.png)
 
@@ -35,13 +37,13 @@ $ git clone git@github.com:chenstephen0501/mask_map.git
 $ cd mask_ma
 ```
 
-### 2. 安裝依賴
+### 2. 安裝插件
 ```bash
 $ npm install
 ```
 
 ### 3. 設定環境變數
-- VITE_API_BASE_URL=http://your-backend-api-url.com
+- VITE_API_BASE_URL=http://your-api-url.com
 
 ### 4. 啟動開發伺服器
 ```bash

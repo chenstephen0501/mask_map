@@ -8,7 +8,7 @@
         <p>電話: {{ pharmacy.properties.phone }}</p>
         <p>最後更新時間: {{ pharmacy.properties.updated }}</p>
         <button @click="showOnMap" class="mt-4 bg-blue-500 text-white py-2 px-4 rounded">顯示在地圖上</button>
-        <button @click="closeModal" class="mt-4 bg-gray-500 text-white py-2 px-4 rounded">關閉</button>
+        <button @click="closeModal" class="mt-4 ml-2 bg-red-500 text-white py-2 px-4 rounded">關閉</button>
       </div>
     </div>
 </template>
