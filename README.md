@@ -4,9 +4,8 @@
 
 [口罩地圖連結](https://maskmap0.netlify.app/)
 
-![Mask Map首頁](/public/image/maks_map.png)
+![Mask Map首頁](/public/image/mask_map.gif)
 
-[專案演示影片](https://youtu.be/wToDe6N1KfU)
 
 ## 專案功能
 
