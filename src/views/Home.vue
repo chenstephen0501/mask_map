@@ -154,8 +154,8 @@ const showPharmacyOnMap = (pharmacy) => {
 </script>
 
 <template>
-  <div class="container flex flex border-2 border-green-400">
-    <div class="aside w-3/12 border-2 border-blue-300">
+  <div class="container flex flex ">
+    <div class="aside w-3/12 ">
       <div class="aside-container">
 
         <div class="select-block border border-b-black bg-gray-300 py-3 pl-2">  
@@ -189,7 +189,7 @@ const showPharmacyOnMap = (pharmacy) => {
           </label>
         </div>
 
-        <div class="pharmacy-list border-2 border-orange-400 max-h-96 overflow-auto" v-if="pharmacyData.length > 0">
+        <div class="pharmacy-list  max-h-96 overflow-auto" v-if="pharmacyData.length > 0">
 
           <div class="pharmacy-item snap-center border-b-black" v-for="p in pharmacyData" :key="p.id">
             <div class="content flex">
@@ -217,8 +217,8 @@ const showPharmacyOnMap = (pharmacy) => {
 
       </div>
     </div>
-    <div  class="map border-2 w-9/12 border-orange-400">
-      <div id="map" class="map-container border-2 border-pink-400 ">
+    <div  class="map  w-9/12 ">
+      <div id="map" class="map-container ">
 
       </div>
     </div>
