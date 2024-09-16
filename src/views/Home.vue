@@ -65,8 +65,8 @@ watch (selectedCity, (newCity) => {
 
 watch (selectedArea, async (newArea) => {
   let result = null
-  const response = await fetch(base_url)
-  const data = await response.json()
+  const response = await axios.get(base_url)
+  const data = response.data
   const filteredPharmacies = data.features.filter(item => item.properties.town === selectedArea.value && item.properties.county === selectedCity.value)
   if (filteredPharmacies.length > 0) {
     pharmacyData.value = filteredPharmacies
@@ -118,10 +118,13 @@ watch(keyword, async (newKeyword) => {
   }
   
   const debounceValidate = debounce(validateKeyword, 1000)
+  if (marker) {
+    marker.remove()
+  }
   if (!debounceValidate(newKeyword)) {
     debounceValidate(newKeyword)
-    const response = await fetch(base_url)
-    const data = await response.json()
+    const response = await axios.get(base_url)
+    const data = response.data
     const filteredPharmacies = data.features.filter(item => item.properties.name.includes(keyword.value))
     pharmacyData.value = filteredPharmacies
   } else {

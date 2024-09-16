@@ -13,7 +13,6 @@
     "leaflet": "^1.9.4",
     "lodash": "^4.17.21",
     "vue": "^3.4.29",
-    "vue-axios": "^3.5.2",
     "vue-router": "^4.3.3"
   },
   "devDependencies": {
