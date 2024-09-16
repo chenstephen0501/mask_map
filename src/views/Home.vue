@@ -20,21 +20,21 @@ let marker = null
 let map = null
 const redIcon = L.icon({
   iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
-  shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png', // 照樣使用預設的陰影
-  iconSize: [25, 41], // 圖示的大小
-  iconAnchor: [12, 41], // 圖示錨點（對齊底部中心）
-  popupAnchor: [1, -34], // 彈出框位置
-  shadowSize: [41, 41] // 陰影大小
+  shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41], 
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
 })
 
 onMounted(() => {
   cites.value = CityCountyData
   const personWalkIcon = L.divIcon({
   html: '<i class="fa-solid fa-person-walking fa-3x" style="color:blue"></i>',
-   className: 'custom-marker',  // 可以定義自己的 class 進行更多樣式定制
-   iconSize: [25, 41],  // 設置圖示的大小
-   iconAnchor: [12, 41],  // 錨點設置在底部中心
-   popupAnchor: [0, -30],  // 彈出框的位置
+  className: 'custom-marker',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [0, -30],
   })
   
   map = L.map('map', {
@@ -52,39 +52,6 @@ onMounted(() => {
       return `<div><p>我在這!</p></div>`
     }).openPopup()
 
-  // var marker = L.marker([24.8045300, 120.9658900]).addTo(map)
-  // L.marker([51.5, -0.09]).addTo(map)
-  //     .bindPopup('A pretty CSS popup.<br> Easily customizable.')
-  //     .openPopup()
-  
-  // var marker = L.marker([51.5, -0.09]).addTo(map)
-  
-  // var circle = L.circle([51.508, -0.11], {
-  //     color: 'red',
-  //     fillColor: '#f03',
-  //     fillOpacity: 0.5,
-  //     radius: 500
-  // }).addTo(map)
-
-  // var polygon = L.polygon([
-  //   [51.509, -0.08],
-  //   [51.503, -0.06],
-  //   [51.51, -0.047]
-  // ]).addTo(map)
-
-  // var popup = L.popup()
-  //   .setLatLng([51.513, -0.09])
-  //   .setContent("I am a standalone popup.")
-  //   .openOn(map)
-
-  // openStreetMap = L.map(map, { 
-  //   center: [25.042474, 121.513729],
-  //   zoom: 18
-  // })
-  // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  //     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-  //     maxZoom: 20,
-  //   }).addTo(openStreetMap)
 })
 
 watch (selectedCity, (newCity) => {
